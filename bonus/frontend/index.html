@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Multi-Agent Legal Advisory</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="logo">⚖️</div>
+        <h1>Legal Advisory Agents</h1>
+        <p>Supervisor-Workers Multi-Agent System</p>
+      </header>
+
+      <main>
+        <div class="chat-container" id="chatContainer">
+          <div class="message system">
+            <div class="avatar">🤖</div>
+            <div class="bubble">
+              Xin chào! Tôi là Hệ thống Tư vấn Pháp lý Đa lĩnh vực. Vui lòng nhập câu hỏi để tôi phân tích.
+            </div>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <form id="chatForm">
+            <input 
+              type="text" 
+              id="userInput" 
+              placeholder="Ví dụ: Công ty trốn thuế và bị rò rỉ dữ liệu khách hàng..." 
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="sendBtn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <!-- Worker Status Dashboard -->
+      <aside class="dashboard">
+        <h2>Agent Dashboard</h2>
+        <div class="agent-list">
+          <div class="agent-card" id="agent-supervisor">
+            <div class="agent-icon">🎯</div>
+            <div class="agent-info">
+              <h3>Supervisor</h3>
+              <span class="status idle">Idle</span>
+            </div>
+          </div>
+          <div class="agent-card" id="agent-law">
+            <div class="agent-icon">⚖️</div>
+            <div class="agent-info">
+              <h3>Law Worker</h3>
+              <span class="status idle">Idle</span>
+            </div>
+          </div>
+          <div class="agent-card" id="agent-tax">
+            <div class="agent-icon">💰</div>
+            <div class="agent-info">
+              <h3>Tax Worker</h3>
+              <span class="status idle">Idle</span>
+            </div>
+          </div>
+          <div class="agent-card" id="agent-privacy">
+            <div class="agent-icon">🔒</div>
+            <div class="agent-info">
+              <h3>Privacy Worker</h3>
+              <span class="status idle">Idle</span>
+            </div>
+          </div>
+          <div class="agent-card" id="agent-synthesizer">
+            <div class="agent-icon">📝</div>
+            <div class="agent-info">
+              <h3>Synthesizer</h3>
+              <span class="status idle">Idle</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
